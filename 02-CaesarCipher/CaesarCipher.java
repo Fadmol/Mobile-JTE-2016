@@ -43,10 +43,10 @@ public class CaesarCipher
             }
         } 
         finally {
-            // Tutup stream masukan
+            
             if (masukan != null)
                 masukan.close();
-            // Tutup stream keluaran
+            
             if (keluaran != null)
                 keluaran.close();
             }
