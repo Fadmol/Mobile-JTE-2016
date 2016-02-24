@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Check which radio button was clicked
         switch(view.getId()) {
-            case R.id.radioButton:
+            case R.id.radioButton:dsfs
 
                     textView.setText(apakabar);
 
