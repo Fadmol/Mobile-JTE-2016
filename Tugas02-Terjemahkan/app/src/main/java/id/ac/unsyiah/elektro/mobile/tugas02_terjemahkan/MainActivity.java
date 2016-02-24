@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -49,27 +50,28 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }public void pasKlikTerjemahkan(View view ){
+    }
+
+    public void pasKlikTerjemahkan(View view) {
         TextView textView = (TextView) findViewById(R.id.textView);
         String apakabar = getString(R.string.TulisanInd);
-        textView.setText(apakabar);
-        TulisanInd = true;
-    }
-    public void pasKlik(View lihat ){
-        TextView textView = (TextView) findViewById(R.id.textView);
-        String apakabar = getString(R.string.TulisanAch);
-        textView.setText(apakabar);
-        TulisanAch = true;
-    }
-    public void pasKlikk(View lihat ){
-        TextView textView = (TextView) findViewById(R.id.textView);
-        String apakabar = getString(R.string.TulisanIng);
-        textView.setText(apakabar);
-        TulisanIng = true;
-    }
+        String Aloo = getString(R.string.TulisanAch);
+        String Hello = getString(R.string.TulisanIng);
 
 
-    private boolean TulisanInd = false;
-    private boolean TulisanAch = false;
-    private boolean TulisanIng = false;
+        // Check which radio button was clicked
+        switch (view.getId()) {
+            case R.id.btnTerjemah:
+                textView.setText(apakabar);
+
+                break;
+            case R.id.btnTerjemah2:
+                textView.setText(Hello);
+                break;
+
+            case R.id.btnTerjemah3:
+                textView.setText(Aloo);
+                break;
+        }
+    }
 }

@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:text="@string/Terjemah2"
         android:id="@+id/btnTerjemah2"
-        android:onClick="pasKlikk"
+        android:onClick="pasKlikTerjemahkan"
         android:layout_below="@+id/btnTerjemah"
         android:layout_centerHorizontal="true" />
     <Button
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:text="@string/Terjemah3"
         android:id="@+id/btnTerjemah3"
-        android:onClick="pasKlik"
+        android:onClick="pasKlikTerjemahkan"
         android:layout_below="@+id/btnTerjemah2"
         android:layout_alignRight="@+id/btnTerjemah2"
         android:layout_alignEnd="@+id/btnTerjemah2" />
