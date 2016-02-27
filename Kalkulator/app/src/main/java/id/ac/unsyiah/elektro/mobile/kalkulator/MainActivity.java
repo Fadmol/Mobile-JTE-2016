@@ -8,10 +8,17 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    Spinner spinner;
+    ArrayAdapter<CharSequence> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,20 +58,42 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
- public void Klik (View view){
-     EditText numAngka1 = (EditText) findViewById(R.id.numAngka);
-     String angkaStr = numAngka1.getText().toString();
-     long angka1 = Long.valueOf(angkaStr);
 
-     EditText numAngka2 = (EditText) findViewById(R.id.numAngka2);
-     String angkaStr2 = numAngka2.getText().toString();
-     long angka2 = Long.valueOf(angkaStr2);
+    public void Klik(View view) {
+        EditText numAngka1 = (EditText) findViewById(R.id.numAngka);
+        String angka1Str = numAngka1.getText().toString();
+        float angka1 = Long.valueOf(angka1Str);
 
-     long hasil = angka1 + angka2;
+        EditText numAngka2 = (EditText) findViewById(R.id.numAngka2);
+        String angka2Str = numAngka2.getText().toString();
+        Float angka2 = Float.valueOf(angka2Str);
 
-             TextView Hasil = (TextView) findViewById(R.id.Hasil);
-     String hasilStr = Long.toString(hasil);
-     Hasil.setText(hasilStr);
- }
+
+
+        TextView txtHasil = (TextView) findViewById(R.id.Hasil);
+        switch(view.getId()) {
+            case R.id.radioButton:
+                Float hasil = Float.valueOf(angka1 + angka2);
+                String hasilStr = Float.toString(hasil);
+                txtHasil.setText(hasilStr);
+                break;
+            case R.id.radioButton2:
+                Float hasil1 = Float.valueOf(angka1 - angka2);
+                String hasilStr1 = Float.toString(hasil1);
+                txtHasil.setText(hasilStr1);
+                break;
+            case R.id.radioButton3:
+                Float hasil2 = Float.valueOf(angka1 * angka2);
+                String hasilStr2 = Float.toString(hasil2);
+                txtHasil.setText(hasilStr2);
+                break;
+
+            case R.id.radioButton4:
+                float hasil3 = Float.valueOf(angka1 / angka2);
+                String hasilStr3 = Float.toString(hasil3);
+                txtHasil.setText(hasilStr3);
+                break;
+        }
+    }
 }
 

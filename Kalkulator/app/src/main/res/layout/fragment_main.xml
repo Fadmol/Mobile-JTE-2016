@@ -19,15 +19,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="+"
-        android:id="@+id/textView"
-        android:layout_below="@+id/numAngka"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -35,17 +26,7 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/numAngka2"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="="
-        android:id="@+id/btnSamaDengan"
-        android:layout_below="@+id/numAngka2"
-        android:onClick="Klik"
+        android:layout_below="@+id/radioGroup"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -55,8 +36,61 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Hasil"
         android:id="@+id/Hasil"
-        android:layout_below="@+id/btnSamaDengan"
-        android:layout_toRightOf="@+id/btnSamaDengan"
-        android:layout_toEndOf="@+id/btnSamaDengan" />
+        android:layout_below="@+id/numAngka2"
+        android:layout_toRightOf="@+id/numAngka2"
+        android:layout_toEndOf="@+id/numAngka2" />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup"
+        android:layout_below="@+id/numAngka"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:id="@+id/radioButton2"
+            android:checked="false"
+            android:layout_below="@+id/numAngka"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:onClick="Klik" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:id="@+id/radioButton"
+            android:checked="false"
+            android:layout_below="@+id/numAngka"
+            android:layout_toRightOf="@+id/radioButton3"
+            android:layout_toEndOf="@+id/radioButton3"
+            android:onClick="Klik" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:id="@+id/radioButton3"
+            android:checked="false"
+            android:layout_below="@+id/numAngka"
+            android:layout_toRightOf="@+id/radioButton4"
+            android:layout_toEndOf="@+id/radioButton4"
+            android:onClick="Klik" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:id="@+id/radioButton4"
+            android:checked="false"
+            android:layout_below="@+id/numAngka"
+            android:layout_toRightOf="@+id/radioButton2"
+            android:layout_toEndOf="@+id/radioButton2"
+            android:onClick="Klik" />
+    </RadioGroup>
+
 
 </RelativeLayout>
