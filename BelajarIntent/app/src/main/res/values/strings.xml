@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BelajarIntent</string>
+    <string name="app_name2">Halaman 2</string>
+    <string name="action_settings">Settings</string>
+</resources>
