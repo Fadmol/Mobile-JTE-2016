@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="id.ac.unsyiah.elektro.mobile.tugas09_tebakgambar.MainActivityFragment"
+    tools:showIn="@layout/activity_main">
+
+    <Button
+        android:layout_width="133dp"
+        android:layout_height="104dp"
+        android:id="@+id/sepeda"
+        android:layout_row="0"
+        android:background="@drawable/sepe"
+        android:layout_column="3"
+        android:layout_marginLeft="10dp"
+        android:onClick="onKlickGambar" />
+
+    <Button
+        android:layout_width="143dp"
+        android:layout_height="113dp"
+        android:id="@+id/mobil"
+        android:layout_row="6"
+        android:layout_column="1"
+        android:background="@drawable/mobil"
+        android:layout_marginTop="27dp"
+        android:layout_below="@+id/btor"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="onKlickGambar" />
+
+    <Button
+        android:layout_width="143dp"
+        android:layout_height="117dp"
+        android:id="@+id/motor"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:background="@drawable/astut"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="onKlickGambar" />
+
+    <Button
+        android:layout_width="142dp"
+        android:layout_height="122dp"
+        android:id="@+id/btor"
+        android:layout_row="5"
+        android:layout_column="1"
+        android:background="@drawable/bmotor"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="onKlickGambar" />
+
+    <Button
+        android:layout_width="143dp"
+        android:layout_height="119dp"
+        android:id="@+id/becak"
+        android:layout_row="5"
+        android:layout_column="3"
+        android:background="@drawable/bdayung"
+        android:layout_alignTop="@+id/btor"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="onKlickGambar" />
+
+</RelativeLayout>
